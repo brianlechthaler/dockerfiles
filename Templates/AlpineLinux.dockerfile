@@ -1,4 +1,4 @@
-FROM alpinelinux:latest
+FROM alpine:latest
 ENV APKCMD "apk add"
 ENV APKPKG "tor"
 RUN $APKCMD $APKPKG
