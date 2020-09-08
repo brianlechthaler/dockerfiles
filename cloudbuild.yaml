@@ -1,0 +1,36 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/jupyter', '--pull' , '-f' , './Jupyter.dockerfile' , '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/nmap', '--pull' , '-f' , './Nmap.Dockerfile' , '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/suricata', '--pull' , '-f' , './Suricata.dockerfile' , '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/wireguard', '--pull' , '-f' , './WireGuard.dockerfile' , '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/alpinelinux', '--pull' , '-f' , './Templates/AlpineLinux.dockerfile' , '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/archlinux', '--pull' , '-f' , './Templates/ArchLinux.dockerfile' , '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/debianlinux', '--pull' , '-f' , './Templates/DebianLinux.dockerfile' , '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/centoslinux', '--pull' , '-f' , './Templates/CentOSLinux.dockerfile' , '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/kalilinux', '--pull' , '-f' , './Templates/KaliLinux.dockerfile' , '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/parrotlinux', '--pull' , '-f' , './Templates/ParrotLinux.dockerfile' , '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/ubuntulinux', '--pull' , '-f' , './Templates/UbuntuLinux.dockerfile' , '.' ]
+
+images:
+- 'gcr.io/$PROJECT_ID/jupyter'
+- 'gcr.io/$PROJECT_ID/nmap'
+- 'gcr.io/$PROJECT_ID/suricata'
+- 'gcr.io/$PROJECT_ID/wireguard'
+- 'gcr.io/$PROJECT_ID/alpinelinux'
+- 'gcr.io/$PROJECT_ID/archlinux'
+- 'gcr.io/$PROJECT_ID/debianlinux'
+- 'gcr.io/$PROJECT_ID/centoslinux'
+- 'gcr.io/$PROJECT_ID/kalilinux'
+- 'gcr.io/$PROJECT_ID/parrotlinux'
+- 'gcr.io/$PROJECT_ID/ubuntulinux'
