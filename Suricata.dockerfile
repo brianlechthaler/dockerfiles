@@ -7,8 +7,7 @@ ENV VER=5.0.2
 ADD dist/suricata/ /root/dist/
 #
 # Install packages
-RUN sed -i 's/dl-cdn/dl-2/g' /etc/apk/repositories && \
-    apk -U --no-cache add \
+RUN apk -U --no-cache add \
                  ca-certificates \
                  curl \
                  file \
