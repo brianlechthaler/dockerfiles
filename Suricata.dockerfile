@@ -4,7 +4,7 @@ FROM alpine:edge
 ENV VER=5.0.2
 #
 # Include dist
-ADD dist/ /root/dist/
+ADD dist/suricata/ /root/dist/
 #
 # Install packages
 #RUN sed -i 's/dl-cdn/dl-2/g' /etc/apk/repositories && \
