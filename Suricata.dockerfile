@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine
 #
 # VARS
 ENV VER=5.0.2
@@ -12,6 +12,7 @@ RUN apk -U --no-cache add \
                  curl \
                  file \
 		 hiredis \
+		 libhiredis \
                  libcap \
                  wget && \
     apk -U add --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
