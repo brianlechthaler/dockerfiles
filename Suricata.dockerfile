@@ -68,8 +68,8 @@ RUN    apk -U add \
     mkdir -p /opt/builder/ && \
     wget https://www.openinfosecfoundation.org/download/suricata-$VER.tar.gz && \
     tar xvfz suricata-$VER.tar.gz --strip-components=1 -C /opt/builder/ && \
-    rm suricata-$VER.tar.gz && \
-    cd /opt/builder && \
+    rm suricata-$VER.tar.gz
+RUN cd /opt/builder && \
     ./configure \
 	--prefix=/usr \
 	--sysconfdir=/etc \
@@ -83,8 +83,11 @@ RUN    apk -U add \
 	--enable-geoip \
 	--enable-gccprotect \
 	--enable-pie \
-	--enable-luajit && \
-    make && \
+	--enable-luajit 
+	
+RUN cd /opt/builder && \
+    make
+RUN cd /opt/builder && \
     make check && \
     make install && \
     make install-full && \
