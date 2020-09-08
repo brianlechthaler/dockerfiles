@@ -1,9 +1,5 @@
-FROM alpine:latest
-ENV ADDITONAL_DEPS elasticsearch
-ENV APKCMD "apk add"
-ENV APKPKG "py3-pip gcc python3-dev"
-RUN $APKCMD $APKPKG
-RUN mkdir -p /opt/jupyter/
+FROM python:3
+ENV PYTHON_DEPS elasticsearch
 RUN pip install -U pip
-RUN pip install -U jupyter $ADDITIONAL_DEPS
+RUN pip install -U $PYTHON_DEPS
 ENTRYPOINT ["jupyter", "notebook"]
