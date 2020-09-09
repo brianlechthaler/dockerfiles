@@ -4,8 +4,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/nmap', '--pull' , '-f' , './Nmap.Dockerfile' , '.' ]
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/suricata', '--pull' , '-f' , './Suricata.dockerfile' , '.' ]
-- name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/wireguard', '--pull' , '-f' , './WireGuard.dockerfile' , '.' ]
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/alpinelinux', '--pull' , '-f' , './Templates/AlpineLinux.dockerfile' , '.' ]
