@@ -23,7 +23,6 @@ steps:
 images:
 - 'gcr.io/$PROJECT_ID/jupyter'
 - 'gcr.io/$PROJECT_ID/nmap'
-- 'gcr.io/$PROJECT_ID/suricata'
 - 'gcr.io/$PROJECT_ID/wireguard'
 - 'gcr.io/$PROJECT_ID/alpinelinux'
 - 'gcr.io/$PROJECT_ID/archlinux'
