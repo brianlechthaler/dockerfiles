@@ -20,7 +20,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/ubuntulinux', '--pull' , '-f' , './Templates/UbuntuLinux.dockerfile' , '.' ]
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/awsIPython', '--pull' , '-f' , './aws.dockerfile' , '.' ]
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/aws', '--pull' , '-f' , './aws.dockerfile' , '.' ]
 
 images:
 - 'gcr.io/$PROJECT_ID/jupyter'
