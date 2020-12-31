@@ -1,7 +1,7 @@
 FROM alpine
 #
 # VARS
-ENV VER=5.0.2
+ENV VER=6.0.1
 #
 # Include dist
 ADD dist/suricata/ /root/dist/
